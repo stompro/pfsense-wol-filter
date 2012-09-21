@@ -4,27 +4,30 @@ pfsense-wol-filter
 Perl script that accesses the wol functionality of a pfsense firewall and wakes machines based on various criteria.
 
 Requirements
-============
+------------
 
 pfSense 2.0 or higher.
 
 Perl
 
+Perl Modules
 HTTP::Mechanize
+HTML::TableExtract
 
 pfSense Setup
-=============
+-------------
 You must create a pfsense user specifically for use with this script that only
 has access to the wake on lan functionality.
 
-Setup -> User Manager
+1. Log in to the pfSense GUI and go to Setup -> User Manager
 
-First select the group tab and use the + icon to create a new group.
-Name the group WOL or whatever you want.
-Description Wake On LAN
-Click Save
+2. First select the group tab and use the + icon to create a new group.
 
-Now click the E for edit icon next to the group you just created so you can
+3. Name the group WOL or whatever you want.
+   Description Wake On LAN
+   Click Save
+
+4. Now click the E for edit icon next to the group you just created so you can
 assigne privileges to that group.
 
 In the Assign Privileges section, press the + icon.
